@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal portfolio of Dhul Mussa — Computer Science and Mathematics student, developer, data professional and educator.">
+
+  <title>Idrees Ibrahim Mussa | Computer Science Student & Developer</title>
+  
+  
+<style>
+  
+:root{
+  --bg:#07111f;
+  --surface:#0d1b2e;
+  --surface2:#12243b;
+  --text:#eef6ff;
+  --muted:#a8b8ca;
+  --accent:#54d6c7;
+  --accent2:#5da9ff;
+  --border:rgba(255,255,255,.1);
+  --shadow:0 20px 60px rgba(0,0,0,.28);-
+  -radius:22px;
+  --max:1120px;
+}
+  
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+  
+html{
+  scroll-behavior:smooth
+}
+  
+body{
+  font-family:Inter,system-ui,-apple system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+radial-gradient(circle at 85% 10%,rgba(84,214,199,.12),transparent 28%),
+radial-gradient(circle at 10% 30%,rgba(93,169,255,.12),transparent 25%),var(--bg);
+color:var(--text);
+  line-height:1.65}
+a{color:inherit;
+  text-decoration:none
+}
+  
+.container{
+  width:min(92%,var(--max));
+  margin:auto
+}
+  
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:20;
+  background:rgba(7,17,31,.75);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border)
+}
+  
+.nav-inner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+  
+.logo{
+  font-size:1.15rem;
+  font-weight:800;
+  letter-spacing:.04em
+}
+  
+.logo span{
+  color:var(--accent)
+}
+  
+.nav-links{
+  display:flex;
+  gap:24px;
+  align-items:center
+}
+  
+.nav-links a{
+  color:var(--muted);
+  font-size:.92rem
+}
+
+.nav-links a:hover{
+  color:var(--accent)
+}
+  
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--text);
+  font-size:1.5rem
+}
+  
+.hero{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:110px 0 70px
+}
+  
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center
+}
+  
+.eyebrow{
+  color:var(--accent);
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.8rem
+}
+  
+h1{
+  font-size:clamp(2.7rem,7vw,5.4rem);
+  line-height:1.02;
+  margin:14px 0 22px;
+  letter-spacing:-.055em
+}
+  
+.gradient{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent
+}
+  
+.hero p{
+  font-size:1.12rem;
+  color:var(--muted);
+  max-width:680px
+}
+  
+.actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px
+}
+  
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 20px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s
+}
+  
+.btn.primary{
+  background:linear-gradient(100deg,var(--accent),var(--accent2));
+  color:#06111c;
+  border:0
+}
+  
+.btn.secondary{
+  background:rgba(255,255,255,.04)
+}
+  
+.btn:hover{
+  transform:translateY(-2px)
+  }
+  
+.profile-card{
+  background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:30px;
+  box-shadow:var(--shadow)
+}
+  
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#07111f;
+  font-size:2.4rem;
+  font-weight:900;
+  margin-bottom:22px
+}
+  
+  
+  
+  
+  
+  
+  .profile-image,
+.avatar{
+    width:200px;
+    height: 200px;
+    border-radius:50%;
+    object-fit:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:bold;
+    background:#4CAF50;
+    color:white;
+}
+  
+  
+  
+.profile-card h2{
+  font-size:1.5rem
+}
+  
+.profile-card p{
+    font-size:.96rem;
+    margin-top:8px
+  }
+  
+.stat-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:24px
+}
+  
+.stat{
+  background:rgba(255,255,255,.045);
+  border:1px solid var(--border);
+  padding:14px;
+  border-radius:16px
+}
+  
+ .stat strong{
+    display:block;
+    color:var(--accent)
+  }
+  
+section{
+  padding:95px 0
+}
+  
+.section-title{
+  margin-bottom:38px
+}
+  
+.section-title span{
+  color:var(--accent);
+  font-weight:700
+}
+  
+.section-title h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin-top:5px}
+  
+.section-title p{
+  color:var(--muted);
+  max-width:680px
+}
+
+.about-grid,.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px
+}
+  
+.card{
+  background:rgba(255,255,255,.045);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px
+}
+  
+.card p{
+  color:var(--muted)
+}
+  
+.card h3{
+  margin-bottom:10px
+}
+  
+.skills{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+.skill{
+  padding:22px;
+  border-radius:18px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  transition:.2s
+}
+  
+.skill:hover{
+  transform:translateY(-4px);
+  border-color:rgba(84,214,199,.4)
+}
+  
+.skill .icon{
+  font-size:1.5rem;
+  margin-bottom:8px
+}
+  
+.skill h3{
+  font-size:1rem
+}
+  
+.skill p{
+  font-size:.86rem;
+  color:var(--muted);
+  margin-top:6px
+}
+  
+.timeline{
+  border-left:1px solid var(--border);
+  padding-left:25px;
+  display:grid;
+  gap:25px
+}
+  
+.item{
+  position:relative
+}
+  
+.item:before{
+  content:"";
+  position:absolute;
+  left:-31px;
+  top:7px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 5px rgba(84,214,199,.1)
+}
+  
+.item small{
+  color:var(--accent);
+  font-weight:700
+}
+  
+.item h3{
+  margin:5px 0
+}
+  
+.item p{
+  color:var(--muted)
+}
+  
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+  
+.project{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:25px
+}
+  
+.project h3{
+  margin:12px 0 8px
+}
+  
+.project p{
+  color:var(--muted);
+  font-size:.92rem
+}
+  
+.tags{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-top:17px}
+  
+.tag{
+  font-size:.73rem;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(84,214,199,.09);
+  color:var(--accent)
+}
+  
+.contact-box{
+  display:flex;
+  flex-direction:column;
+  gap:14px
+}
+  
+.contact-line{
+  padding:15px;
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  color:var(--muted)
+}
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  text-align:center;
+  font-size:.9rem
+}
+  
+  
+@media(max-width:800px){
+  
+ .nav-links{
+   display:none;
+   position:absolute;
+   top:72px;
+   left:0;
+   right:0;
+   background:rgba(7,17,31,.97);
+   padding:20px;
+   flex-direction:column;
+   border-bottom:1px solid var(--border)
+ }
+  
+ .nav-links.open{
+   display:flex
+ }
+  
+.menu{
+  display:block
+}
+  
+.hero-grid,.about-grid,.contact-grid{
+  grid-template-columns:1fr
+}
+  
+.hero{
+  padding-top:120px
+}
+  
+.profile-card{
+  max-width:520px
+}
+  
+ .skills,.project-grid{
+   grid-template-columns:1fr 1fr
+ }
+}
+  
+  
+@media(max-width:520px){
+  
+  .skills,.project-grid{
+    grid-template-columns:1fr
+  }
+  
+  section{
+    padding:70px 0
+  }
+  .card,.project{
+    padding:21px
+  }
+}
+</style>
+</head>
+
+
+<body>
+<nav>
+ <div class="container nav-inner">
+  <a class="logo" href="#home">Idrees<span>Mussa</span>.</a>
+  <button class="menu" id="menu" aria-label="Open menu">☰</button>
+  <div class="nav-links" id="navLinks">
+   <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+ </div>
+</nav>
+
+<main>
+  
+<section class="hero" id="home">
+ <div class="container hero-grid">
+
+  <div>
+    
+   <div class="eyebrow">Computer Science • Mathematics • Education</div>
+   <h1>Building useful ideas with <span class="gradient">technology.</span>
+     
+   </h1>
+   <p>I’m <strong>Idrees <i>Ibrahim</i> Mussa</strong>, a Computer Science and Mathematics student passionate about technology, learning, problem-solving, and taking responsibility for work that creates real value.</p>
+    
+   <div class="actions">
+    <a class="btn primary" href="#projects">Explore My Work</a>
+    <a class="btn secondary" href="#contact">Let's Connect</a>
+   </div>
+  </div>
+   
+
+
+  <aside class="profile-card">
+
+    <!-- Profile Section -->
+<section id="home">
+    <div class="profile-container">
+
+        <!-- User Photo -->
+        <img src="profile1.jpg"
+             alt="Idrees Ibrahim Mussa"
+             class="profile-image"
+             onerror="this.style.display='none';
+                      document.getElementById('avatar').style.display='flex';">
+
+        <!-- Default Avatar -->
+        <div id="avatar" class="avatar" style="display:none;">
+            IIM
+        </div>
+
+        <div class="profile-text">
+            <h1>Idrees Ibrahim Mussa</h1>
+            <h2>Computer Science Student</h2>
+            <p>
+                I am a Computer Science and Mathematics student passionate about
+                technology, software development, data management, and solving
+                real-world problems. I value responsibility, continuous learning,
+                and delivering quality work.
+            </p>
+        </div>
+
+    </div>
+</section>
+    
+   <h2>Computer Science Student</h2>
+    
+   <p>Domasi College of Education • Bachelor of Education (Science), Mathematics & Computer Science</p>
+   <div class="stat-grid">
+    <div class="stat">
+      <strong>2023 – 2026</strong>
+      <small>Data experience</small>
+    </div>
+     
+    <div class="stat">
+      <strong>C, C++, C#, Java + SQL</strong>
+      <small>Development</small>
+    </div>
+     
+    <div class="stat">
+      <strong>ODK + KoboToolbox</strong>
+      <small>Data collection</small>
+    </div>
+     
+    <div class="stat">
+      <strong>M&E</strong>
+      <small>Project support</small>
+      
+    </div>
+   </div>
+  </aside>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-title">
+    <span>01 / ABOUT</span>
+    <h2>A learner who turns skills into solutions.</h2>
+    <p>My background combines computing, mathematics, education, data work and practical project experience.</p>
+  </div>
+
+  <div class="about-grid">
+   <div class="card">
+     <h3>Who I am</h3>
+     <p>I am pursuing a Bachelor of Education (Science), specializing in Mathematics and Computer Science. I enjoy developing software, working with data, learning new technologies and applying technical knowledge to practical problems.</p>
+   </div>
+
+   <div class="card">
+     <h3>My approach</h3>
+     <p>I value responsibility, accuracy, confidentiality, organization and continuous improvement. Whether I am coding an application, collecting data or supporting a project, I aim to deliver work that is reliable and useful.</p>
+   </div>
+
+  </div>
+ 
+</div>
+
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-title">
+    <span>02 / SKILLS</span>
+    <h2>What I can do.</h2>
+    <p>A practical mix of software development, data, office productivity, project support and communication.</p>
+    
+  </div>
+  <div class="skills">
+   <div class="skill">
+     <div class="icon">☕</div>
+     <h3>Java Development</h3>
+     <p>Java programming, GUI development with Swing/NetBeans and application logic.</p>
+     
+   </div>
+   <div class="skill">
+     <div class="icon">🗄️</div>
+     <h3>SQL & MySQL</h3>
+     <p>Database design, SQL queries, CRUD concepts, JDBC and relational data management.</p>
+     
+   </div>
+   <div class="skill"><div class="icon">📱</div>
+     <h3>Android Development</h3>
+     <p>Android Studio and Java-based application development.</p>
+   </div>
+
+   <div class="skill">
+     <div class="icon">📊</div>
+     <h3>Data Collection</h3>
+     <p>ODK and KoboToolbox for digital field data collection and validation.</p>
+   </div>
+
+   <div class="skill">
+     <div class="icon">🧹</div>
+     <h3>Data Management</h3>
+     <p>Data entry, verification, cleaning, electronic records and database maintenance.</p>
+   </div>
+    
+   <div class="skill">
+     <div class="icon">📋</div>
+     <h3>Project M&E</h3>
+     <p>Monitoring, evaluation, reporting and project management support.</p>  
+   </div>
+
+   <div class="skill">
+     <div class="icon">💻</div>
+     <h3>Microsoft Office</h3>
+     <p>Word, Excel, PowerPoint, Outlook and digital documentation.</p>  
+   </div>
+
+   <div class="skill">
+     <div class="icon">☁️</div>
+     <h3>Google Workspace</h3>
+     <p>Digital collaboration, documentation and remote teamwork.</p>  
+   </div>
+    
+   <div class="skill">
+     <div class="icon">🤝</div>
+     <h3>Communication</h3>
+     <p>Community engagement, interviewing, stakeholder communication and reporting.</p>
+   </div>
+
+  </div>
+ 
+</div>
+
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="section-title">
+    <span>03 / EXPERIENCE</span>
+    <h2>Experience that shaped me.</h2>
+  </div>
+
+  <div class="timeline">
+   <div class="item">
+     <small>2023 — 2026</small>
+     <h3>Data Collection & Data Entry — Joyce Banda Foundation</h3>
+     <p>Supported community-based projects through data collection, entry, validation, verification, cleaning, electronic records management, reporting and monitoring support while maintaining confidentiality.</p>   
+   </div>
+
+   <div class="item">
+     <small>2026</small>
+     <h3>Project Management, Monitoring & Evaluation</h3>
+     <p>Completed professional training in Project Management, Monitoring and Evaluation and developed practical understanding of project reporting and M&E activities.</p>  
+   </div>
+
+   <div class="item">
+     <small>Current</small>
+     <h3>Bachelor of Education (Science)</h3>
+     <p>Domasi College of Education — specializing in Mathematics and Computer Science, combining teaching, analytical thinking and computing.</p>  
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container">
+  <div class="section-title"><span>04 / PROJECTS</span>
+    <h2>Things I have been building.</h2>
+    <p>Selected practical projects that reflect my interest in software, education and entrepreneurship.</p>
+    
+  </div>
+   
+  <div class="project-grid">
+   <article class="project">
+     <span class="tag">Java • Swing • MySQL</span>
+     <h3>Student Score System</h3>
+     <p>A desktop GUI concept for managing students, courses, lecturers, subjects and academic records with database connectivity and CRUD operations.</p>
+     <div class="tags">
+       <span class="tag">NetBeans</span>
+       <span class="tag">JDBC</span>
+       
+     </div>
+   </article>
+    
+   <article class="project">
+     <span class="tag">Web • Education</span>
+     <h3>Campus Voting Platform</h3>
+     <p>A voting website concept designed for student elections, including manifesto-period information and election-day results.</p>
+     
+     <div class="tags">
+       <span class="tag">HTML</span>
+       <span class="tag">Web</span>
+     </div>
+   </article>
+    
+   <article class="project">
+     <span class="tag">Business • Printing</span>
+     <h3>EduPoint Services</h3>
+     <p>A student-focused printing and stationery business concept providing printing, photocopying, typing, binding, laminating and school supplies.</p>
+     <div class="tags">
+       <span class="tag">Entrepreneurship</span>
+       <span class="tag">Design</span>
+     </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+  
+  
+<section id="contact">
+  
+ <div class="container">
+   
+  <div class="section-title">
+    <span>05 / CONTACT</span>
+    <h2>Let's build something useful.</h2>
+    <p>I am open to opportunities where I can apply technology, data, education and problem-solving.</p>
+    
+  </div>
+  <div class="contact-grid">
+    
+   <div class="card contact-box">
+     
+    <div class="contact-line">📍 Lilongwe, Malawi.<p>Often based in zomba where i am doing my studies.</p>
+    </div>
+    
+    <div class="contact-line">☎️  
+       <a href="+265 991 83 66 99"> +265 991 83 66 99</a>/
+       <a href="+265 886 30 03 01"> +265 886 30 03 01</a>
+    </div>
+     
+    <div class="contact-line">🎓 Domasi College of Education</div>
+    <div class="contact-line">💡 Interests: Software • Data • Education • Technology</div>
+   </div>
+    
+   <div class="card">
+    <h3>Professional mindset</h3>
+    <p>I am passionate about my responsibilities and committed to learning, delivering quality work and using technology to solve problems.</p>
+     
+     
+    <div class="actions"><a class="btn primary" href="#home">Back to top ↑</a></div>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Dhul Mussa.</div></footer>
+
+<script>
+const menu=document.getElementById('menu'), links=document.getElementById('navLinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+  
+  
+</body>
+</html>
